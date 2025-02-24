@@ -13,10 +13,12 @@
     },
     "scripts": {
         "build": "rslib build",
-        "build:watch": "rslib build --watch"
+        "build:watch": "rslib build --watch",
+        "changelogen": "changelogen --release"
     },
     "devDependencies": {
         "@rslib/core": "^0.5.1",
+        "changelogen": "^0.5.7",
         "typescript": "^5.7.3",
         "vitest": "^1.0.0"
     },
