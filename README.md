@@ -110,9 +110,7 @@ npm run build:watch
 ```
 
 ### Run tests:
-```sh
-npx vitest
-```
+TO DO: Implement testing
 
 ---
 
