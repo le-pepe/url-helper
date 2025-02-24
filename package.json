@@ -1,0 +1,33 @@
+{
+    "name": "@le-pepe/url-helper",
+    "version": "1.0.0",
+    "description": "A lightweight JavaScript utility for parsing, constructing, normalizing, and manipulating URLs. Supports both browser and Node.js environments.",
+    "main": "dist/index.js",
+    "module": "dist/index.mjs",
+    "types": "dist/src/index.d.ts",
+    "exports": {
+        ".": {
+            "import": "./dist/index.mjs",
+            "require": "./dist/index.js"
+        }
+    },
+    "scripts": {
+        "build": "rslib build",
+        "build:watch": "rslib build --watch"
+    },
+    "devDependencies": {
+        "@rslib/core": "^0.5.1",
+        "typescript": "^5.7.3",
+        "vitest": "^1.0.0"
+    },
+    "keywords": [
+        "url",
+        "helper",
+        "node",
+        "vue",
+        "react",
+        "astro"
+    ],
+    "author": "LePepe <hola@lepepe.dev>",
+    "license": "MIT"
+}
