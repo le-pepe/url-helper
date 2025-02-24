@@ -31,5 +31,8 @@
         "astro"
     ],
     "author": "LePepe <hola@lepepe.dev>",
-    "license": "MIT"
+    "license": "MIT",
+    "publishConfig": {
+        "access": "public"
+    }
 }

@@ -3,7 +3,6 @@
 
 [![License: MIT](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)  
 [![NPM Version](https://img.shields.io/npm/v/@le-pepe/url-helper.svg)](https://www.npmjs.com/package/@le-pepe/url-helper)  
-[![Build Status](https://img.shields.io/github/actions/workflow/status/le-pepe/url-helper/test.yml?branch=main)](https://github.com/le-pepe/url-helper/actions)
 
 ## 🚀 Features
 ✅ **Parse, build, join, and normalize URLs**  
