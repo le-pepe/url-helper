@@ -1,6 +1,18 @@
 # Changelog
 
 
+## v1.1.3
+
+[compare changes](https://github.com/le-pepe/url-helper/compare/v1.1.2...v1.1.3)
+
+### 📖 Documentation
+
+- **README.md:** Update testing instructions to indicate that testing implementation is pending ([bd053cf](https://github.com/le-pepe/url-helper/commit/bd053cf))
+
+### ❤️ Contributors
+
+- LePepe ([@le-pepe](http://github.com/le-pepe))
+
 ## v1.1.2
 
 [compare changes](https://github.com/le-pepe/url-helper/compare/v1.1.1...v1.1.2)
