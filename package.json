@@ -1,6 +1,6 @@
 {
     "name": "@le-pepe/url-helper",
-    "version": "1.0.0",
+    "version": "1.1.0",
     "description": "A lightweight JavaScript utility for parsing, constructing, normalizing, and manipulating URLs. Supports both browser and Node.js environments.",
     "main": "dist/index.js",
     "module": "dist/index.mjs",
