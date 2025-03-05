@@ -11,6 +11,9 @@
             "require": "./dist/index.js"
         }
     },
+    "files": [
+        "dist"
+    ],
     "scripts": {
         "build": "rslib build",
         "build:watch": "rslib build --watch",

@@ -59,14 +59,19 @@ export class URLHelper {
             }
 
             const url = new URL(base);
-            let pathname = [url.pathname, ...paths].map(p => p.replace(/^\/+|\/+$/g, "")).join("/");
-            url.pathname = `/${pathname}`;
+            let pathname = [url.pathname, ...paths]
+                .map(p => p.replace(/^\/+|\/+$/g, "")) // Remove leading/trailing slashes
+                .filter(Boolean) // Remove empty segments
+                .join("/");
+
+            url.pathname = pathname.startsWith("/") ? pathname : `/${pathname}`;
 
             return url.toString();
         } catch (error) {
             throw new Error("Invalid base URL");
         }
     }
+
 
     /**
      * Normalizes a URL by removing `.` and `..` segments from the path.
