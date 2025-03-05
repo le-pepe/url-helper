@@ -1,6 +1,18 @@
 # Changelog
 
 
+## v1.2.0
+
+[compare changes](https://github.com/le-pepe/url-helper/compare/v1.1.3...v1.2.0)
+
+### 🚀 Enhancements
+
+- **docs): add npm downloads badge to README for better visibility of package popularity chore(package.json): include dist folder in files array to ensure it is published fix(index.ts:** Improve URL pathname handling by filtering empty segments and ensuring leading slash is present ([28c8ab9](https://github.com/le-pepe/url-helper/commit/28c8ab9))
+
+### ❤️ Contributors
+
+- LePepe ([@le-pepe](http://github.com/le-pepe))
+
 ## v1.1.3
 
 [compare changes](https://github.com/le-pepe/url-helper/compare/v1.1.2...v1.1.3)
