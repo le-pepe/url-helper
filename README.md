@@ -66,12 +66,22 @@ console.log(url); // "http://example.com/path"
 Join a base URL with multiple segments.  
 If no base is provided, it defaults to `window.location.origin` in the browser.
 ```ts
-const fullUrl = URLHelper.join("https://example.com/base", "subpath", "file.html");  
-console.log(fullUrl); // "https://example.com/base/subpath/file.html"  
+// In the browser, if no base is provided, it defaults to window.location.origin:
+console.log(URLHelper.join({ paths: ["users", "profile"] }));
+// For example, on https://myapp.com, this results in: "https://myapp.com/users/profile"
 
-// Without a base (only works in a browser environment)  
-const dynamicUrl = URLHelper.join(null, "api", "users");  
-console.log(dynamicUrl); // "https://your-current-site.com/api/users"  
+// In Node.js, since window.location is unavailable, it returns just the path:
+console.log(URLHelper.join({ paths: ["users", "profile"] }));
+// Output: "/users/profile"
+
+// Providing a base without a schema defaults to https://:
+console.log(URLHelper.join({ base: "mywebsite.com", paths: ["dashboard", "settings"] }));
+// Output: "https://mywebsite.com/dashboard/settings"
+
+// Forcing HTTP:
+console.log(URLHelper.join({ base: "mywebsite.com", paths: ["dashboard", "settings"] }, { forceHttp: true }));
+// Output: "http://mywebsite.com/dashboard/settings"
+
 ```
 
 ---  
