@@ -1,6 +1,18 @@
 # Changelog
 
 
+## v1.3.0
+
+[compare changes](https://github.com/le-pepe/url-helper/compare/v1.2.0...v1.3.0)
+
+### 🚀 Enhancements
+
+- **URLHelper:** Enhance join method to accept options and improve base URL handling ([eeb5967](https://github.com/le-pepe/url-helper/commit/eeb5967))
+
+### ❤️ Contributors
+
+- LePepe ([@le-pepe](http://github.com/le-pepe))
+
 ## v1.2.0
 
 [compare changes](https://github.com/le-pepe/url-helper/compare/v1.1.3...v1.2.0)
