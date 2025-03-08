@@ -51,26 +51,42 @@ export class URLHelper {
 
     /**
      * Joins a base URL with multiple path segments.
+     * - If `base` is not provided, it uses `window.location.origin` in browsers.
+     * - If `base` has no schema, it defaults to `https://` unless options force otherwise.
+     * - Supports forcing `https` or `http` via options.
      */
-    static join(base: string, ...paths: string[]) {
-        try {
-            if (!/^https?:\/\//.test(base)) {
-                throw new Error("Invalid base URL: Missing schema (http/https)");
+    static join(
+        { base, paths }: { base?: string; paths: string[] },
+        options: Options = {}
+    ) {
+        const { forceHttps = false, forceHttp = false } = options;
+
+        // If no base is provided, use window.location.origin if available.
+        if (!base) {
+            if (typeof window !== "undefined" && window.location) {
+                base = window.location.origin;
+            } else {
+                // In non-browser environments, return a relative path.
+                return "/" + paths.map(p => p.replace(/^\/+|\/+$/g, "")).join("/");
             }
-
-            const url = new URL(base);
-            let pathname = [url.pathname, ...paths]
-                .map(p => p.replace(/^\/+|\/+$/g, "")) // Remove leading/trailing slashes
-                .filter(Boolean) // Remove empty segments
-                .join("/");
-
-            url.pathname = pathname.startsWith("/") ? pathname : `/${pathname}`;
-
-            return url.toString();
-        } catch (error) {
-            throw new Error("Invalid base URL");
         }
+
+        // If the base does not have a schema, add one.
+        if (!/^https?:\/\//.test(base)) {
+            base = `${forceHttps ? "https" : forceHttp ? "http" : "https"}://${base}`;
+        }
+
+        const url = new URL(base);
+        // Join the existing pathname with the additional path segments.
+        let joinedPath = [url.pathname, ...paths]
+            .map(p => p.replace(/^\/+|\/+$/g, ""))
+            .filter(Boolean)
+            .join("/");
+
+        url.pathname = `/${joinedPath}`;
+        return url.toString();
     }
+
 
 
     /**
