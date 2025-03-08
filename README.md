@@ -1,9 +1,9 @@
+[![npm version][npm-version-src]][npm-version-href]
+[![npm downloads][npm-downloads-src]][npm-downloads-href]
+[![License][license-src]][license-href]
+
 # @le-pepe/url-helper
 *A lightweight and versatile URL helper for JavaScript & TypeScript*
-
-[![License: MIT](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)  
-[![NPM Version](https://img.shields.io/npm/v/@le-pepe/url-helper.svg)](https://www.npmjs.com/package/@le-pepe/url-helper)
-[![npm downloads][npm-downloads-src]][npm-downloads-href]
 
 ## 🚀 Features
 ✅ **Parse, build, join, and normalize URLs**  
@@ -116,6 +116,13 @@ TO DO: Implement testing
 ---
 
 ## 📝 License
-This project is licensed under the **MIT License** – see the [LICENSE](LICENSE) file for details.  
+This project is licensed under the **MIT License** – see the [LICENSE](LICENSE) file for details.
+
+[npm-version-src]: https://img.shields.io/npm/v/@le-pepe/url-helper/latest.svg?style=flat&colorA=020420&colorB=00DC82
+[npm-version-href]: https://npmjs.com/package/@le-pepe/url-helper
+
 [npm-downloads-src]: https://img.shields.io/npm/dm/@le-pepe/url-helper.svg?style=flat&colorA=020420&colorB=00DC82
 [npm-downloads-href]: https://npmjs.com/package/@le-pepe/url-helper
+
+[license-src]: https://img.shields.io/npm/l/@le-pepe/url-helper.svg?style=flat&colorA=020420&colorB=00DC82
+[license-href]: https://npmjs.com/package/@le-pepe/url-helper
